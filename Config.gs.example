@@ -1,0 +1,29 @@
+// ========================================
+// 共通設定ファイル
+// ========================================
+
+// LINE Messaging API設定
+const CHANNEL_ACCESS_TOKEN = 'YOUR_CHANNEL_ACCESS_TOKEN_HERE'; // チャネルアクセストークン
+
+// ========================================
+// 送信先設定
+// ========================================
+
+// グループに送信（1通で全員に届く）
+const SEND_TO_TYPE = 'group';
+const LINE_GROUP_ID = 'YOUR_GROUP_ID_HERE'; // グループID
+
+// ========================================
+// メール監視設定
+// ========================================
+
+// ケース1: 特定の送信者からのメールを転送
+// const TARGET_EMAIL = 'sender@example.com'; // 送信者のメールアドレス
+// const SEARCH_TYPE = 'from'; // 送信者で検索
+
+// ケース2: 特定の受信先（エイリアス）宛のメールを転送（送信者問わず）
+const TARGET_EMAIL = 'joe.yshr380+line@gmail.com'; // 受信先のメールアドレス（エイリアス可）
+const SEARCH_TYPE = 'to'; // 受信先で検索
+
+// Gmail設定
+const LABEL_NAME = 'ProcessedForLINE'; // 処理済みラベル
