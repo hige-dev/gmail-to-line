@@ -24,8 +24,11 @@ function forwardEmailToLine() {
     return;
   }
 
-  threads.forEach(thread => {
+  // 古い順に処理するため配列を逆順にする
+  threads.reverse().forEach(thread => {
     const messages = thread.getMessages();
+    // スレッド内のメッセージも古い順に処理
+    messages.reverse();
 
     messages.forEach(message => {
       // メール情報を取得（空の場合はデフォルト値を設定）
