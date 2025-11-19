@@ -55,9 +55,8 @@ function forwardEmailToLine() {
     // 処理済みラベルを付ける
     thread.addLabel(label);
 
-    // 受信トレイから削除
-    const inboxLabel = GmailApp.getInboxLabel();
-    thread.removeLabel(inboxLabel);
+    // 受信トレイから削除（アーカイブに移動）
+    thread.moveToArchive();
   });
 }
 
